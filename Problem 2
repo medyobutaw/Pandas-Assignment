@@ -1,0 +1,23 @@
+import pandas as pd
+
+data = pd.read_csv('cars.csv')
+
+A = data.iloc[[0,1,2,3,4],[0,1,3,5,7,9]]
+print(A)
+
+B = data[:1]
+
+print('\n')
+print(B)
+
+C = data.loc[[23],['Model','cyl']]
+
+print('\n')
+print('No. of cylinders of Camaro Z28:')
+print(C)
+
+D = data.loc[[1,28,18],['Model','cyl','gear']]
+
+print('\n')
+print('No. of cylinders and gear type of the car models:')
+print(D)
